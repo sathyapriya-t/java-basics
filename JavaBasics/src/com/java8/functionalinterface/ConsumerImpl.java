@@ -1,8 +1,11 @@
-package com.java8.data;
+package com.java8.functionalinterface;
 
 import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+
+import com.java8.data.Student;
+import com.java8.data.StudentDataBase;
 
 public class ConsumerImpl {
 
