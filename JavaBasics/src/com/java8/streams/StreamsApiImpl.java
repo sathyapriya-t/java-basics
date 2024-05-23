@@ -44,7 +44,6 @@ public class StreamsApiImpl {
 		System.out.println(partitioningByWithOneArgument());
 		System.out.println(partitioningByWithTwoArgument());
 		System.out.println(iterateFactoryMethod());
-		System.out.println(groupingByWithMaxByWithCollectingAndThenEg());
 	
 	}
 
