@@ -7,15 +7,13 @@ import java.util.List;
 import com.data.Student;
 import com.data.StudentDataBase;
 
-
-public class defaultStaticMethodsImpl {
+public class DefaultStaticMethodsImpl {
 	static Comparator<Student> comparingName = Comparator.comparing(Student::getName);
 	static Comparator<Student> comparingGPA = Comparator.comparingInt(Student::getGradeLevel);
 
-
 	public static void main(String[] args) {
 
-		List<String> nameList = Arrays.asList("sathya","priya","Arun","Jeeva");
+		List<String> nameList = Arrays.asList("sathya", "priya", "Arun", "Jeeva");
 		nameList.sort(Comparator.naturalOrder());
 		System.out.println(nameList);
 		nameList.sort(Comparator.reverseOrder());
@@ -33,26 +31,34 @@ public class defaultStaticMethodsImpl {
 		List<Student> listNameNullsLast = compartorNullsLast();
 		listNameNullsLast.forEach(System.out::println);
 
-
+		// Interface
+		Multipier interfaces = new MultiplierImpl();
+		interfaces.multiply(5, 1, 20); // calling the normal method which implemented by MultipilerImplClass
+		List<Integer> asList = Arrays.asList(1, 3, 2, 5, 4, 6, 9, 7);
+		System.out.println(interfaces.findListSize(asList)); // default method which is overriden by MultipilerImplClass
+		System.out.println(Multipier.multiplyList(asList)); // static method Accessed with ClassName
 
 	}
 
-	private static List<Student> compartorChaining() { //throws Exception with null values
+	private static List<Student> compartorChaining() { // throws Exception with null values
 		List<Student> list = StudentDataBase.getAllStudents();
 		list.sort(comparingName.thenComparing(comparingGPA));
 		return list;
 	}
+
 	private static List<Student> compartorCustomList() {
 		List<Student> list = StudentDataBase.getAllStudents();
 		list.sort(comparingName);
 		return list;
 	}
-	private static List<Student> compartorNullsFirst() { //handles null values first
+
+	private static List<Student> compartorNullsFirst() { // handles null values first
 		List<Student> list = StudentDataBase.getAllStudents();
 		list.sort(Comparator.nullsFirst(comparingName));
 		return list;
 	}
-	private static List<Student> compartorNullsLast() { //handles null values Last
+
+	private static List<Student> compartorNullsLast() { // handles null values Last
 		List<Student> list = StudentDataBase.getAllStudents();
 		list.sort(Comparator.nullsLast(comparingName));
 		return list;
