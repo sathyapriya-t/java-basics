@@ -1,13 +1,15 @@
-package com.java8.data;
+package com.data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Student {
     private String name;
     private int gradeLevel;
     private double gpa;
     private String gender;
+    private Optional<Bike> bikeOptional = Optional.empty();
 
 
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
@@ -21,7 +23,7 @@ public class Student {
     public String getGender() {
         return gender;
     }
-
+ 
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -70,6 +72,14 @@ public class Student {
                 ", activities=" + activities +
                 '}';
     }
+
+	public Optional<Bike> getBikeOptional() {
+		return bikeOptional;
+	}
+
+	public void setBikeOptional(Optional<Bike> bikeOptional) {
+		this.bikeOptional = bikeOptional;
+	}
 
 
 }

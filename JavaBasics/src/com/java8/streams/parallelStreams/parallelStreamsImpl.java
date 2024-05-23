@@ -1,7 +1,7 @@
 package com.java8.streams.parallelStreams;
 
-import com.java8.data.Student;
-import com.java8.data.StudentDataBase;
+import com.data.Student;
+import com.data.StudentDataBase;
 
 public class parallelStreamsImpl {
 

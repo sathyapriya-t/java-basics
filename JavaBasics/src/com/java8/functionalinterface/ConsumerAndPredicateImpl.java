@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Predicate;
 
-import com.java8.data.Student;
-import com.java8.data.StudentDataBase;
+import com.data.Student;
+import com.data.StudentDataBase;
 
 public class ConsumerAndPredicateImpl {
 

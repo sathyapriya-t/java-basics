@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import com.java8.data.Student;
-import com.java8.data.StudentDataBase;
+import com.data.Student;
+import com.data.StudentDataBase;
 
 public class PredicateImpl {
 
