@@ -32,7 +32,6 @@ public class UtilDateAndSQLToLocalDateAndViceVersaImpl {
 		java.sql.Date date3 = new java.sql.Date(20241203);
 		System.out.println("java.sql.Date to LocaLDate: " + date3.toLocalDate());
 		System.out.println("java.sql.Date to LocaLDate: " + date2.toLocalDate());
-
 	}
 
 }
