@@ -8,7 +8,7 @@
           2.Complete this method to calculate the sum of squares of all positive integers up to n. If n is less than 0, return -1.
           3.Do not print anything in your code. The method should return the sum or -1.
 */
-package com.basics;
+package com.problem.basics;
 
 public class SumOfSquares {
 	public long calculateSumOfSquares(int n) {

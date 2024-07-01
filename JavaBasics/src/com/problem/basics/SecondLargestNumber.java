@@ -1,4 +1,4 @@
-package com.basics;
+package com.problem.basics;
 
 /*In this programming challenge, you are given an incomplete Java method named findSecondLargestElement(int[] array) in the class ArrayMagic.
 This method takes an array of integers and returns the second largest element in that array.

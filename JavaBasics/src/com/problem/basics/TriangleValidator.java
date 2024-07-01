@@ -7,7 +7,7 @@
        The conditions for a valid triangle are:
          1.Each of the angles must be a positive integer.
          2.The sum of all the three angles must be exactly 180.*/
-package com.basics;
+package com.problem.basics;
 
 public class TriangleValidator {
 	public boolean isValidTriangle(int angle1, int angle2, int angle3) {

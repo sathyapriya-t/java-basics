@@ -1,4 +1,4 @@
-package com.basics;
+package com.problem.basics;
 
 /*Coding Exercise - Is Hexadecimal String?
 In this problem, you are given a class MyString with a String variable str and two methods:
