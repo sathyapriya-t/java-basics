@@ -17,24 +17,24 @@ public class MaximumElementInList {
 	}
 
 	private static void findingMaxValueUsingComparator(List<Integer> list) {
-		//.max(Integer::compareTo) - means .max((i,j)-> i.compareTo(j))
+		// .max(Integer::compareTo) - means .max((i,j)-> i.compareTo(j))
 		Optional<Integer> max = list.stream().max(Integer::compareTo);
-		System.out.println("Max: "+max.get());
+		System.out.println("Max: " + max.get());
 	}
 
 	private static void findingMaxValueUsingMapToLong(List<Integer> list) {
 		long max = list.stream().mapToLong(i -> i).max().getAsLong();
-		System.out.println("max: "+max);
+		System.out.println("max: " + max);
 	}
 
 	private static void maxVal(List<Integer> list) {
 		Optional<Integer> max = list.stream().max(Comparator.naturalOrder());
-		System.out.println("Max Value: "+max.get());
+		System.out.println("Max Value: " + max.get());
 	}
 
 	private static void findingMaxUsingSorted(List<Integer> list) {
 		Integer max = list.stream().sorted(Comparator.reverseOrder()).findFirst().orElse(0);
-		System.out.println("Max: "+ max);
+		System.out.println("Max: " + max);
 	}
 
 }
