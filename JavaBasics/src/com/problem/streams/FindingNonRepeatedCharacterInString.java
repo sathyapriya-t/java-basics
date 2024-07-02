@@ -2,6 +2,7 @@ package com.problem.streams;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -15,6 +16,18 @@ public class FindingNonRepeatedCharacterInString {
 		String str = "SathyaArun";
 		nonRepeatedCharUsingMapAndCounting(str);
 		usingFunctionIdentity(str);
+		usingLinkedHashMap(str);
+	}
+
+	private static void usingLinkedHashMap(String str) {
+		// LinnkedHashMap - to maintain the insertion order
+		// Function.identity() - is a substitute of - i-> i - it takes the value i and
+		// Returns the value i
+		Character firstNonRepeatedValue = str.toLowerCase().chars().mapToObj(c -> (char) c)
+				.collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+				.entrySet().stream().filter(val -> val.getValue() == 1).map(ent -> ent.getKey()).findFirst()
+				.orElse(null);
+		System.out.println("firstNonRepeatedValue: " + firstNonRepeatedValue);
 	}
 
 	private static void usingFunctionIdentity(String str) {
