@@ -23,6 +23,7 @@ public class FindingDuplicateValuesInList {
 		List<Integer> collect = duplicateMap.entrySet().stream().filter(en -> en.getValue() > 1)
 				.collect(Collectors.mapping(i -> i.getKey(), Collectors.toList()));
 		System.out.println(collect);
+		
 	}
 
 	private static void findingDuplicateUsingSet(List<Integer> list) {
