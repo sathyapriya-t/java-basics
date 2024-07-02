@@ -12,7 +12,7 @@ public class ComparingDateWithPeriods {
 		System.out.println("period getDays: " + period.getDays());
 		System.out.println("period getMonths: " + period.getMonths());
 
-		// period betwwen LocalDates
+		// period between LocalDates
 		System.out.println();
 		System.out.println("Comparing date using Period Between Method that returns Period");
 		LocalDate localDate = LocalDate.now();
