@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import com.java8.data.Student;
-import com.java8.data.StudentDataBase;
+import com.data.Student;
+import com.data.StudentDataBase;
 
 public class StreamsApiImpl {
 
@@ -43,7 +43,15 @@ public class StreamsApiImpl {
 		System.out.println(groupingByWithMaxByWithCollectingAndThenEg());
 		System.out.println(partitioningByWithOneArgument());
 		System.out.println(partitioningByWithTwoArgument());
+		System.out.println(iterateFactoryMethod());
+		System.out.println(groupingByWithMaxByWithCollectingAndThenEg());
 	
+	}
+
+	private static List<Integer> iterateFactoryMethod() {
+		return Stream.iterate(1, s -> {
+			 return s+1;
+		}).limit(10).toList();
 	}
 	
 	private static Map<Boolean, Set<Student>> partitioningByWithTwoArgument() {

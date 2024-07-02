@@ -1,7 +1,9 @@
-package com.java8.data;
+package com.data;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Supplier;
 
 public class StudentDataBase {
 
@@ -9,6 +11,15 @@ public class StudentDataBase {
      * Total of 6 students in the database.
      * @return
      */
+	public static Supplier<Student> studentSuplier = () -> {
+		Bike bike = new Bike();
+		bike.setName("sathya");
+		bike.setModel("duke");
+		Student std = new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball"));
+		std.setBikeOptional(Optional.ofNullable(bike));
+		return std;
+	};
+	
     public static List<Student> getAllStudents(){
 
         /**
