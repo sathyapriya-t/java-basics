@@ -1,4 +1,4 @@
-package com.java8;
+package com.java8.general;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -27,7 +27,7 @@ class FunctionImplemantation implements Function<Integer, Integer> {
 	}
 }
 
-public class FunctionalInterface {
+public class FunctionalInterfaceWithStreams {
 
 	public static void main(String[] args) {
 
@@ -37,9 +37,9 @@ public class FunctionalInterface {
 				.forEach(new ConsumerImplemantation());
 
 		// MethodReference
-		List.of(1, 2, 3, 4, 5, 6).stream().filter(n -> FunctionalInterface.isEven(n))
+		List.of(1, 2, 3, 4, 5, 6).stream().filter(n -> FunctionalInterfaceWithStreams.isEven(n))
 				.max((n, n1) -> Integer.compare(n, n1));
-		List.of(1, 2, 3, 4, 5, 6).stream().filter(FunctionalInterface::isEven).max(Integer::compare).orElse(0);
+		List.of(1, 2, 3, 4, 5, 6).stream().filter(FunctionalInterfaceWithStreams::isEven).max(Integer::compare).orElse(0);
 
 	}
 
