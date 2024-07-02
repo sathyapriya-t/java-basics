@@ -44,7 +44,7 @@ public class StreamsApiImpl {
 		System.out.println(partitioningByWithOneArgument());
 		System.out.println(partitioningByWithTwoArgument());
 		System.out.println(iterateFactoryMethod());
-	
+		System.out.println(boxedEg().stream().max(Comparator.naturalOrder()));
 	}
 
 	private static List<Integer> iterateFactoryMethod() {

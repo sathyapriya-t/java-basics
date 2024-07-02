@@ -1,4 +1,4 @@
-package com.basics;
+package com.problem.basics;
 
 /* Anagram Checker
 You are given two strings str1 and str2. 

@@ -1,4 +1,4 @@
-package com.basics;
+package com.problem.basics;
 
 /*
 Find Last Digit Of A Number In this problem,you are tasked with completing the implementation of a NumberUtils

@@ -1,4 +1,4 @@
-package com.basics;
+package com.problem.basics;
 
 /*Word Reverser
 In this exercise, you are required to write a Java method called reverseWordsInSentence within the provided StringMagic class.

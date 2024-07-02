@@ -1,4 +1,4 @@
-package com.basics;
+package com.problem.basics;
 
 /*Student Grades A to F based on Marks
 You are tasked with implementing the functionality of a Student class which calculates and assigns the student's grade based on the provided marks.

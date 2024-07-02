@@ -1,4 +1,4 @@
-package com.basics;
+package com.problem.basics;
 
 /*Check if an Array is Sorted
 You are given an incomplete Java method called isSorted() in the class ArrayMagic.

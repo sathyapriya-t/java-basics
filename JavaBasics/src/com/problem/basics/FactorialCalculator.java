@@ -1,4 +1,4 @@
-package com.basics;
+package com.problem.basics;
 /*Coding Exercise: Calculate Factorial Of a Number
 In this problem, you are tasked with completing the implementation of a FactorialCalculator class in Java that calculates the factorial of a given number.
 The factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n.
