@@ -18,8 +18,6 @@ public class runner {
 		employee.setEmployer("TCS");
 		System.out.println(employee.toString());
 		
-
-
 	}
 
 }
