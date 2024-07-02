@@ -1,12 +1,11 @@
 package com.java8.streams;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -40,8 +39,26 @@ public class StreamsApiImpl {
 		System.out.println(collcectGroupingByWithOneArgument());
 		System.out.println(collcectGroupingByWithTwoArgument());
 		System.out.println(collcectGroupingByWithThreeArgument());
-		
+		System.out.println(groupingByWithMaxByEg());
+		System.out.println(groupingByWithMaxByWithCollectingAndThenEg());
+		System.out.println(partitioningByWithOneArgument());
+		System.out.println(partitioningByWithTwoArgument());
+	
+	}
+	
+	private static Map<Boolean, Set<Student>> partitioningByWithTwoArgument() {
+		return StudentDataBase.getAllStudents().stream().collect(Collectors.partitioningBy(std -> std.getGradeLevel() >= 3.5,Collectors.toSet()));
+	}
 
+	private static Map<Boolean, List<Student>> partitioningByWithOneArgument() {
+		return StudentDataBase.getAllStudents().stream().collect(Collectors.partitioningBy(std -> std.getGradeLevel() >= 3.5));
+	}
+	
+	private static Map<Integer, Object> groupingByWithMaxByWithCollectingAndThenEg() {
+		return StudentDataBase.getAllStudents().stream().collect(Collectors.groupingBy(Student::getGradeLevel,Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparing(Student::getGpa)), Optional::get)));
+	}
+	private static Map<Integer, Optional<Student>> groupingByWithMaxByEg() {
+		return StudentDataBase.getAllStudents().stream().collect(Collectors.groupingBy(Student::getGradeLevel,Collectors.maxBy(Comparator.comparing(Student::getGpa))));
 	}
 	private static Map<String, Long> collcectGroupingByWithThreeArgument() {
 		return StudentDataBase.getAllStudents().stream().collect(Collectors.groupingBy(Student::getGender,LinkedHashMap::new,Collectors.counting()));
