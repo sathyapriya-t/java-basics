@@ -7,21 +7,22 @@ In Java, you have been given a partially implemented TimeConverter class that ai
           Task 1: Complete the convertHoursToMinutes method in the TimeConverter class so that it accurately converts hours into minutes. The method should return an integer value representing the total number of minutes.
           Task 2: Complete the convertDaysToMinutes method in the TimeConverter class so that it accurately converts days into minutes. The method should return an integer value representing the total number of minutes.
         NOTE: Return -1 for invalid cases (days and hours less than 0).*/
+package com.basics;
 
 public class TimeConverter {
 
-    public convertHoursToMinutes(int hours) {
-        if(hours<0){
-            return -1;
-        }
-        return hours*60;
-    }
+	public int convertHoursToMinutes(int hours) {
+		if (hours < 0) {
+			return -1;
+		}
+		return hours * 60;
+	}
 
-    public convertDaysToMinutes(int days) {
-        if(days<0){
-            return -1;
-        }
-        return days*24*60;
-    }
+	public int convertDaysToMinutes(int days) {
+		if (days < 0) {
+			return -1;
+		}
+		return days * 24 * 60;
+	}
 
 }

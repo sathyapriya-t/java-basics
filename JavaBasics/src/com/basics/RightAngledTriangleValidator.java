@@ -13,14 +13,16 @@
         Next, apply the Pythagorean theorem to determine if the triangle is right-angled. Remember to check all combinations of sides.
         If the theorem holds true for any combination of sides, return true. This indicates that the triangle is right-angled.
         If the theorem doesn't hold true for any combination of sides, return false. This indicates that the triangle is not right-angled.*/
+package com.basics;
 
 public class RightAngledTriangleValidator {
-    public boolean isRightAngled(int side1, int side2, int side3) {
+	public boolean isRightAngled(int side1, int side2, int side3) {
 
-        if(side3<=0 || side2<=0 ||side1<=0){
-            return false;
-        }
-        boolean isRightAngle = side1 + side2 == side3*side3 || side2+side3 == side1*side1 || side3+side1 == side2*side2;
-        return isRightAngle;
-    }
+		if (side3 <= 0 || side2 <= 0 || side1 <= 0) {
+			return false;
+		}
+		boolean isRightAngle = side1 + side2 == side3 * side3 || side2 + side3 == side1 * side1
+				|| side3 + side1 == side2 * side2;
+		return isRightAngle;
+	}
 }
