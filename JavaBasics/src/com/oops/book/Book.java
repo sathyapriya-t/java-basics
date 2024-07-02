@@ -1,24 +1,29 @@
 package com.oops.book;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Book {
-	public Book(int price, String author) {
-		this.price = price;
-		this.author = author;
-	}
 
 	// Instance variable
-	private int price;
+	private int id;
 	private String author;
+	private String bookName;
+	private ArrayList<Review> review = new ArrayList<Review>();
 
-	// getter and setter
-	public int getPrice() {
-		return price;
+	public Book(int id, String author, String bookName) {
+		this.id = id;
+		this.author = author;
+		this.bookName = bookName;
 	}
 
-	public void setPrice(int price) {
-		if (price > 0) {
-			this.price = price;
-		}
+	// getter and setter
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getAuthor() {
@@ -29,23 +34,25 @@ public class Book {
 		this.author = author;
 	}
 
-	public void increasePrice(int increasePrice) {
-		System.out.println("increased price " + increasePrice);
-		setPrice(this.price + increasePrice);
+	public String getBookName() {
+		return bookName;
 	}
 
-	public void decreasePrice(int decreasePrice) {
-		System.out.println("decreased price " + decreasePrice);
-		setPrice(this.price - decreasePrice);
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
 	}
 
-	// behaviours
-	void read(String name) {
-		System.out.println("Reading " + name);
+	public List<Review> getReview() {
+		return review;
 	}
 
-	void write(String name) {
-		System.out.println("Writing " + name);
+	public void addReview(Review revie) {
+		this.review.add(revie);
+	}
+
+	@Override
+	public String toString() {
+		return String.format("author -%s , id -%d  ,bookName-%s ,review-%s ", author, id, bookName, review);
 	}
 
 }

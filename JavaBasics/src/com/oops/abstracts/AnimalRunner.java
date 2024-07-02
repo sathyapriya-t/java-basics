@@ -1,4 +1,4 @@
-package abstracts;
+package com.oops.abstracts;
 
 public class AnimalRunner {
 	public static void main(String[] args) {

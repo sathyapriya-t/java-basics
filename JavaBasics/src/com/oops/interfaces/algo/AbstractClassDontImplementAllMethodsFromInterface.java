@@ -1,4 +1,4 @@
-package interfaces.algo;
+package com.oops.interfaces.algo;
 
 //With Abstract class we don't have to necessary implement all the  methods in the interface 
 public abstract class AbstractClassDontImplementAllMethodsFromInterface implements ComplexAlgo {

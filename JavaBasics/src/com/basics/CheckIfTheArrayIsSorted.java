@@ -21,7 +21,6 @@ public class CheckIfTheArrayIsSorted {
 				count++;
 				first = array[i];
 			}
-
 		}
 		System.out.println(count);
 		if (count == array.length) {

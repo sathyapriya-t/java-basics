@@ -1,4 +1,4 @@
-package interfaces.flyable;
+package com.oops.interfaces.flyable;
 
 public class Bird implements Flyable {
 

@@ -1,4 +1,4 @@
-package interfaces.algo;
+package com.oops.interfaces.algo;
 
 public interface ComplexAlgo {
 
