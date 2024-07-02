@@ -1,6 +1,8 @@
 package com.java8.datetimeapi;
 
+import java.time.Clock;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 
@@ -42,6 +44,13 @@ public class LocalDateTimeImpl {
 		System.out.println("dateTime isAfter : "+dateTime.isAfter(localDateTime));
 		System.out.println("dateTime isSupported : "+dateTime.isSupported(ChronoField.DAY_OF_MONTH));
 		
+		//Creation Using ZoneId and Clock
+		System.out.println();
+		System.out.println("Creation dateTime Using ZoneId and Clock !! ");
+		LocalDateTime dateTimeWithId = LocalDateTime.now(ZoneId.of("Asia/Tokyo"));
+		System.out.println("dateTimeWithId : "+dateTimeWithId);
+		LocalDateTime dateTimeWithClock = LocalDateTime.now(Clock.systemDefaultZone());
+		System.out.println("dateTimeWithClock : "+dateTimeWithClock);
 	}
 
 }
