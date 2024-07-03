@@ -1,8 +1,16 @@
 package com.threads;
 
-// Two types:
+// Two types Thread of implementation:
 // 1. Extend Thread class
 // 2. Implement Runnable interface
+
+// STATES OF THREAD:
+// 1.NEW - when a object of the thread is created
+// 2.RUNNABLE - When one thread is running and its waiting for the other to do some operation
+// 3.RUNNING - When the thread is running(doing some operation/ printing)
+// 4.BLOCKED/WAITING - When a thread is waiting for some data from another thread
+// 5.TERMINATED/DEAD - When the thread is completed it job.
+
 class Task1 extends Thread {
 	public void run() { // Signature
 		System.out.println("Task 1 starting!! ");
