@@ -23,7 +23,7 @@ class Task1 extends Thread {
 		for (int i = 0; i < 100; i++) {
 			System.out.print(i * 10 + " ");
 		}
-		System.out.println("/nTask 1 ending");
+		System.out.println("Task 1 ending");
 	}
 }
 
@@ -35,7 +35,7 @@ class Task2 implements Runnable {
 		for (int i = 10; i < 200; i++) {
 			System.out.print(i * 10 + " ");
 		}
-		System.out.println("/nTask 2 ending");
+		System.out.println("Task 2 ending");
 	}
 }
 
@@ -48,12 +48,14 @@ public class ThreadBasic {
 		Task1 task1 = new Task1();
 		task1.setPriority(1);
 		task1.start(); // nor task.run() -> mistake
+		Thread.sleep(1000);
 
 		// task2
 		Task2 task2 = new Task2();
 		Thread thread = new Thread(task2); // Extra step - creating object of thread
 		thread.setPriority(10);
-		thread.start(); // nor task.run() -> mistake
+		thread.start(); 
+		Thread.yield();// nor task.run() -> mistake
 
 		// task3
 		task1.join();
