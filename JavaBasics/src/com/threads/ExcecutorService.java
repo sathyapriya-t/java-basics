@@ -12,7 +12,7 @@ public class ExcecutorService {
 		ExecutorService executorService = Executors.newSingleThreadExecutor();
 
 		// Execution
-		//Task 1
+		// Task 1
 		executorService.execute(new Task1()); // Executing task one
 
 		// Task 2- here we new thread because we implemented it with runnable interface
