@@ -7,7 +7,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-//Callable Interface is for when a thread returns a value
 class CallableTaskWithMultipleValue implements Callable<String> {
 
 	private String name;
@@ -24,7 +23,7 @@ class CallableTaskWithMultipleValue implements Callable<String> {
 
 }
 
-public class CallableRunnerWithMultiplevalues {
+public class CallableRunnerWithAnyOfMultiplevalues {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		// Creation
@@ -33,17 +32,15 @@ public class CallableRunnerWithMultiplevalues {
 		List<CallableTask> resultList = List.of(new CallableTask("sathya"), new CallableTask("priya"),
 				new CallableTask("Arun"), new CallableTask("kumar"));
 
-		// here we will use invoke method for callable - it takes collection
-		// it will return the List<Future<String>>
-		List<Future<String>> submit = executorService.invokeAll(resultList); // invoke method here - not execute/submit
+		// here we will use invokeAny method for callable - it takes collection
+		// it will return the String
+		String submit = executorService.invokeAny(resultList); // invokeAny method here - not execute/submit
 
 		// thread is processed
 		System.out.println("(new CallableTask(\"Sathya\") is done");
 
 		// we can get the string using get method
-		for (Future<String> future : submit) {
-			System.out.println("result: " + future.get());
-		}
+		System.out.println("result: " + submit);
 
 		executorService.shutdown();
 		System.out.println("Main Completed");
