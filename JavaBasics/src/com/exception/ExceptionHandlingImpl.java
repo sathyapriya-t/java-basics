@@ -1,5 +1,7 @@
 package com.exception;
 
+import java.util.Scanner;
+
 public class ExceptionHandlingImpl {
 
 	public static void main(String[] args) {
@@ -16,10 +18,18 @@ public class ExceptionHandlingImpl {
 	private static void method2(String str) {
 		try {
 			str.charAt(0);
-		} catch (Exception e) {
+		} 
+		catch (NullPointerException ex) {
 			//prints the stack trace
+			System.out.println("Null pointer Exception");
+			ex.printStackTrace();
+		}
+		catch (Exception e) {
+			//prints the stack trace
+			System.out.println("Exception");
 			e.printStackTrace();
 		}
+
 	}
 
 }
