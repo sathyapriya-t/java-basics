@@ -9,7 +9,7 @@ import java.util.List;
 public class FileReader {
 
 	public static void main(String[] args) throws IOException {
-		Path path = Paths.get("./java-basics/src/resources/sample.txt");
+		Path path = Paths.get("./java-basics/src/resources/FileRead.txt");
 
 		// Files.readAllLines -> reads all lines and returns as a list
 		// This method is not always ideal because it reads all the line at a time which
