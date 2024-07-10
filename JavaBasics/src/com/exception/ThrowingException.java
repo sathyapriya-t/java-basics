@@ -26,7 +26,7 @@ class Amount {
 	}
 }
 
-public class ThrowingExceptionImpl {
+public class ThrowingException {
 
 	public static void main(String[] args) throws Exception {
 		Amount amount = new Amount("USD", 12);
