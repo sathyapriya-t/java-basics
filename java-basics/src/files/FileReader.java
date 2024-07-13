@@ -14,11 +14,13 @@ public class FileReader {
 		// Files.readAllLines -> reads all lines and returns as a list
 		// This method is not always ideal because it reads all the line at a time which
 		// can affect memory
+
 		List<String> allLines = Files.readAllLines(path);
 		System.out.println("allLines: " + allLines);
 
 		// Files.line -> takes path as input and read the file line by line and returns
 		// as stream of string
+
 		Files.lines(path).map(val -> val.toLowerCase()).filter(val -> val.contains("a")).forEach(System.out::println);
 	}
 
