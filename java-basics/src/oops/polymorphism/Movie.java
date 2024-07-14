@@ -3,6 +3,7 @@ package oops.polymorphism;
 public class Movie {
 	// Instance variable
 	protected int price;
+
 	public Movie(int price, String author) {
 		super();
 		this.price = price;
