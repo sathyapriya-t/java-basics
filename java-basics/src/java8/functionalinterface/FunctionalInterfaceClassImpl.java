@@ -32,6 +32,20 @@ public class FunctionalInterfaceClassImpl {
 		};
 		
 		lParameterInterface.printName("sathya");
+		
+	
+		Square s = new Square(4);
+		SquareFunctionalInterface squareInterface = (Square square) -> {
+			return  s.calculateArea();
+		};
+		
+		System.out.println(squareInterface.area(s));
+		
+		//method reference - we can replace lamda experession
+		Square s1 = new Square(4);
+		SquareFunctionalInterface squareInterface1 = Square::calculateArea;
+		
+		System.out.println(squareInterface1.area(s1));
 	}
 
 }
