@@ -12,7 +12,9 @@ public class GenericRunner {
 		list1.addElement(22);
 		System.out.println(list1.toString());
 		System.out.println(list1.getElement(0));
-
+		
+		
+		System.out.println(list.returnList());
 	}
 
 }
