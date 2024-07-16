@@ -1,21 +1,26 @@
 package threads;
 
-// Two types Thread of implementation:
-// 1. Extend Thread class
-// 2. Implement Runnable interface
+/*thread types 
+Deamon thread - infrastructure thread
+Non Deamon thread OR User thread - threads that aren't infra thread 
 
-// STATES OF THREAD:
-// 1.NEW - when a object of the thread is created
-// 2.RUNNABLE - When one thread is running and its waiting for the other to do some operation
-// 3.RUNNING - When the thread is running(doing some operation/ printing)
-// 4.BLOCKED/WAITING - When a thread is waiting for some data from another thread
-// 5.TERMINATED/DEAD - When the thread is completed it job.
+ Two types to create Thread implementation:
+ 1. Extend Thread class
+ 2. Implement Runnable interface
 
-//MIN_PRIOROTY = 1
-//MAX_PRIORITY = 10
-//NORM_PRIORITY = 5(Default)
+ STATES OF THREAD:
+ 1.NEW - when a object of the thread is created
+ 2.RUNNABLE - When one thread is running and its waiting for the other to do some operation
+ 3.RUNNING - When the thread is running(doing some operation/ printing)
+ 4.BLOCKED/WAITING - When a thread is waiting for some data from another thread
+ 5.TERMINATED/DEAD - When the thread is completed it job.
 
-//join() - waiting for one tread to complete
+MIN_PRIOROTY = 1
+MAX_PRIORITY = 10
+NORM_PRIORITY = 5(Default)
+
+join() - waiting for one tread to complete
+*/
 
 class Task1 extends Thread {
 	public void run() { // Signature

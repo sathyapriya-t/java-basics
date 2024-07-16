@@ -11,8 +11,10 @@ Basically there are 2 types of file reading and writing
 one with Files.read() -> from java8
 Normal one with reader/ write(char)  and inputstream/outputstream (byte)
 
-reader/ writer - if end of the file read method returns null
-nputstream/outputstream - if end of the file read returns -1
+Another by using streams
+there are two types of stream
+1.reader/ writer - if end of the file read method returns null
+2.inputstream/outputstream - if end of the file read returns -1
 
 */
 public class ReadAndWriteByteFiles {
