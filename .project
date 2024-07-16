@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>javaCode</name>
+=======
+	<name>java-basics</name>
+>>>>>>> branch 'main' of https://github.com/sathyapriya-t/javaCode.git
 	<comment></comment>
 	<projects>
 	</projects>
