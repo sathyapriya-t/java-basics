@@ -12,12 +12,17 @@ public class SortToListOfStrings {
 		
 		List<String> list = List.of("sathya","priya","Arun","Kumar");
 		len(list);
-		lenUsingComparator(list);
+		lenUsingComparatorWithLambda(list);
+		lenUsingComparatorInt(list);
 
 	}
 
-	private static void lenUsingComparator(List<String> list) {
+	private static void lenUsingComparatorInt(List<String> list) {
 		List<String> list2 = list.stream().sorted(Comparator.comparingInt(String::length)).toList();
+		System.out.println("list2: "+list2);
+	}
+	private static void lenUsingComparatorWithLambda(List<String> list) {
+		List<String> list2 = list.stream().sorted(Comparator.comparing( s-> s.length())).toList();
 		System.out.println("list2: "+list2);
 	}
 
