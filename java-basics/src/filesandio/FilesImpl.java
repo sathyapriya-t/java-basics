@@ -10,7 +10,10 @@ import java.util.function.BiPredicate;
 /* Files.list(Path) -> lists all the directory
  Files.walk(path, int level) -> lists values based on level
  Files.Find(path, int level, BiPredicate matcher) -> lists values based on level and matcher
- BiPredicate -> takes (path,BasicFileAttributes) -> we can filter using both*/
+ BiPredicate -> takes (path,BasicFileAttributes) -> we can filter using both
+ Files.readstring -> takes path of file and returns the content as string
+ */
+ 
 
 public class FilesImpl {
 
@@ -36,6 +39,13 @@ public class FilesImpl {
 		System.out.println("Using Files.find to list all dir and filter it using matcher");
 		BiPredicate<Path, BasicFileAttributes> matcher = (path, attribute) -> attribute.isDirectory();
 		Files.find(dir2, 1, matcher).forEach(System.out::println);
+		
+		//Files.readString
+		System.out.println();
+		Path dir1 = Paths.get("./java-basics/java-basics/src/resources/FileRead.txt");
+		String string = Files.readString(dir1);
+		System.out.println(string);
+	
 
 	}
 }
