@@ -1,6 +1,7 @@
 package threads;
 
 public class Flag {
+	// volatile - will sync the value in all the threads
 	private volatile boolean flag = false;
 
 	public boolean isFlag() {
@@ -10,6 +11,5 @@ public class Flag {
 	public void setFlag(boolean flag) {
 		this.flag = flag;
 	}
-	
 
 }
