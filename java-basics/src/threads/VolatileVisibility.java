@@ -12,6 +12,7 @@ public class VolatileVisibility {
 		 * thread two will not get the value which is done by first thread thats where
 		 * the volatile keyword comes
 		 */
+		
 		Flag flag = new Flag();
 		new Thread(() -> {
 			try {

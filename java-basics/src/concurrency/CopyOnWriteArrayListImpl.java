@@ -30,7 +30,6 @@ public class CopyOnWriteArrayListImpl {
 		}
 
 		// fail fast
-		
 		List<String> list1 = new ArrayList<String>();
 		list1.add("sathya");
 		list1.add("Priya");
@@ -39,12 +38,11 @@ public class CopyOnWriteArrayListImpl {
 		list1.forEach(val -> {
 			System.out.println("Trying to Add .......");
 			// here trying to add in the list while looping it
-			// list1.add("ujsg");
+			// list1.add("ujsg"); -> throws exception
 
 		});
 
 		// fail safe
-		
 		// Hear comes the CopyOnWriteArrayList - thread safe
 		list.forEach(val -> {
 			System.out.println("Added ");
