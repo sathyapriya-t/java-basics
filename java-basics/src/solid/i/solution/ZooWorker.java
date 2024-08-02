@@ -1,11 +1,11 @@
 package solid.i.solution;
 
-public class ZooWorker implements BearCleaner,BearFeeder{
+public class ZooWorker implements BearCleaner, BearFeeder {
 
 	@Override
 	public void feedBear() {
 		System.out.println("Bear is fed");
-		
+
 	}
 
 	@Override

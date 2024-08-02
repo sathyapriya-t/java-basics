@@ -10,13 +10,14 @@ public class InterfaceSegregation {
 
 	public static void main(String[] args) {
 
-		// I - Interface Seggregation - spliting the larger interface into smaller interface
+		// I - Interface Seggregation - spliting the larger interface into smaller
+		// interface
 		// so that uneccessary methods will not be inherited
-		
+
 		ZooWorker zooWorker = new ZooWorker();
 		zooWorker.cleanBear();
 		zooWorker.feedBear();
-		
+
 		Visitor visitor = new Visitor();
 		visitor.petBear();
 
