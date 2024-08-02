@@ -2,13 +2,17 @@ package solid.o;
 
 import solid.s.Book;
 
-public class Novel extends Book{
-	
+public class Novel extends Book {
+
+	// Novel extends - so this is open for Extenstion
+	// We did add extra attribute in Book class - So colsed for Modification
+
 	private int seriesCount;
 
 	@Override
 	public String toString() {
-		return "Novel [id=" + getId() + ", name=" + getName() + ", Author=" + getAuthor() + "seriesCount=" + seriesCount + "]";
+		return "Novel [id=" + getId() + ", name=" + getName() + ", Author=" + getAuthor() + "seriesCount=" + seriesCount
+				+ "]";
 	}
 
 	public Novel(int id, String name, String author, int seriesCount) {
