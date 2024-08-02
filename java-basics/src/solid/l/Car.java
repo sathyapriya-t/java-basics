@@ -1,7 +1,7 @@
 package solid.l;
 
 public class Car implements Vehicle {
-	
+
 	// Constant
 	private static final int COUNT = 4;
 

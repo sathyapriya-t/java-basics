@@ -8,7 +8,7 @@ public class Bicycle implements Vehicle {
 	// Here this Bicycle doesn't have engine - this voilates the Liskov principle
 	// The Common interface Vechicle should have a method which is acceptle by all
 	// the child classes
-	
+
 	@Override
 	public void engineOn() throws Exception {
 		throw new Exception("Bicycle doesn't have engine");
