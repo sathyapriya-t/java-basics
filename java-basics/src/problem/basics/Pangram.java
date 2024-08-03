@@ -4,7 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Pangram {
+	
 	public static void main(String[] args) {
+		
+		//Pangram - means a string should contain all the alpbhabets in it
 		String str = "athyaqwertyuiopasdfghghjklzxcvbnm";
 		usingCharArrayAndMap(str);
 		
