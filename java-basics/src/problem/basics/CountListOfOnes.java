@@ -10,7 +10,21 @@ public class CountListOfOnes {
 		usingStreams(list);
 
 		usingCollections(list);
+		
+		usingSumingOfAllTheElements(list);
+	
+		usingIntStreamSumMethod(list);
 
+	}
+
+	private static void usingIntStreamSumMethod(List<Integer> list) {
+		int sum = list.stream().mapToInt(i->i).sum();
+		System.out.println("Sum :"+ sum);
+	}
+
+	private static void usingSumingOfAllTheElements(List<Integer> list) {
+		int intValue = list.stream().reduce(0, (i,r)-> i+r).intValue();
+		System.out.println("Count : "+ intValue);
 	}
 
 	private static void usingCollections(List<Integer> list) {
