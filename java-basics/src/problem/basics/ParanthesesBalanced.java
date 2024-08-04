@@ -14,7 +14,6 @@ public class ParanthesesBalanced {
 		usingCounterAndSeparateIf("{{)}");
 		usingCounterAndSeparateIf("{()}");
 
-
 	}
 
 	private static void usingCounterAndSeparateIf(String val) {
@@ -75,7 +74,7 @@ public class ParanthesesBalanced {
 	private static void usingStack(String val) {
 
 		// This only wrrks for "{{(}}" not "{{)}}"
-		//using stack data structure to check the brackets
+		// using stack data structure to check the brackets
 		Stack<Character> stack = new Stack<Character>();
 		for (Character c : val.toCharArray()) {
 			if (c == '{' || c == '(' || c == '[') {
