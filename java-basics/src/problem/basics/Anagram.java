@@ -39,6 +39,7 @@ public class Anagram {
 			// return op;
 			String[] charArray = str1.toUpperCase().split("");
 			String[] charArray1 = str2.toUpperCase().split("");
+			String s = "sathya";
 			Arrays.sort(charArray);
 			Arrays.sort(charArray1);
 			boolean isAnagram = Arrays.equals(charArray1, charArray);

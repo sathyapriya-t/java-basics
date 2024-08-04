@@ -12,8 +12,10 @@ public class AnagramString {
 		String string1 = "Sathya";
 		String string2 = "ayhtaS";
 		anagarm(string1, string2);
-		
+
 		anagramUsingJava8(string1, string2);
+		
+		anagramUsingJava8CharsMethod(string1, string2);
 
 	}
 
@@ -21,6 +23,16 @@ public class AnagramString {
 		String sortedString = Arrays.stream(string1.split("")).sorted().collect(Collectors.joining(""));
 		String sortedString1 = Arrays.stream(string2.split("")).sorted().collect(Collectors.joining(""));
 		if (sortedString.equals(sortedString1)) {
+			System.out.println("It is Anagram !!");
+		} else {
+			System.out.println("It not is Anagram !!");
+		}
+	}
+
+	private static void anagramUsingJava8CharsMethod(String string1, String string2) {
+		int[] sortedString = string1.chars().sorted().toArray();
+		int[] sortedString1 = string2.chars().sorted().toArray();
+		if (Arrays.equals(sortedString1,sortedString)) {
 			System.out.println("It is Anagram !!");
 		} else {
 			System.out.println("It not is Anagram !!");
