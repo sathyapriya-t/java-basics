@@ -14,7 +14,7 @@ public class AnagramString {
 		anagarm(string1, string2);
 
 		anagramUsingJava8(string1, string2);
-		
+
 		anagramUsingJava8CharsMethod(string1, string2);
 
 	}
@@ -32,7 +32,7 @@ public class AnagramString {
 	private static void anagramUsingJava8CharsMethod(String string1, String string2) {
 		int[] sortedString = string1.chars().sorted().toArray();
 		int[] sortedString1 = string2.chars().sorted().toArray();
-		if (Arrays.equals(sortedString1,sortedString)) {
+		if (Arrays.equals(sortedString1, sortedString)) {
 			System.out.println("It is Anagram !!");
 		} else {
 			System.out.println("It not is Anagram !!");
