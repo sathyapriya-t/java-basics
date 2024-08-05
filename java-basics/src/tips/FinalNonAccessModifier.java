@@ -36,7 +36,7 @@ class ExtendingClass extends FinalMethodClass {
 public class FinalNonAccessModifier {
 
 	public static void main(String[] args) {
-		// final classes and methods can ne instanciated , called but can not be
+		// final classes and methods can be instanciated , called but can not be
 		// inherited
 		FinalClass cl = new FinalClass();
 		cl.write("sathya");
