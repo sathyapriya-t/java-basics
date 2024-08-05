@@ -17,19 +17,18 @@ public class TextBlock {
 				   arun
 
 				  jeeva
-				  
+
 				------------------
 				""";
 		System.out.println(str);
-		
-		
-		// we can also use formatted
+
+		// we can also use formatted()
 		String str1 = """
 				sathya %d
 				priya
 				   arun %d
 
-				  jeeva""".formatted(22,23);
+				  jeeva""".formatted(22, 23);
 		System.out.println(str1);
 
 	}
