@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 public class SwitchLogic {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the value");
-		int input = sc.nextInt();
-		SwitchLogic.isWeekDay(input);
-		SwitchLogic.nameOfDay(input);
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter the value");
+			int input = sc.nextInt();
+			SwitchLogic.isWeekDay(input);
+			SwitchLogic.nameOfDay(input);
+		}
 	}
 
 	private static void isWeekDay(int input) {

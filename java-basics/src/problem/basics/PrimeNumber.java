@@ -49,12 +49,13 @@ public class PrimeNumber {
 	}
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("enter the number to find if its prime or not: ");
-		PrimeNumber num = new PrimeNumber(sc.nextInt());
-		System.out.println(num.isPrime());
-		System.out.println(num.sumOfN());
-		System.out.println(num.sumOfDivisors());
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("enter the number to find if its prime or not: ");
+			PrimeNumber num = new PrimeNumber(sc.nextInt());
+			System.out.println(num.isPrime());
+			System.out.println(num.sumOfN());
+			System.out.println(num.sumOfDivisors());
+		}
 
 	}
 }
