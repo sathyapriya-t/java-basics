@@ -61,17 +61,15 @@ public class SerializationImpl {
 // The classes which inherite this Person class must also be implemented with Serializable or else it will throw error.
 class Person implements Serializable {
 
-	/**
-	 * 
-	 */
-
 	// All serializer class must have UID
 	// if we didn't create it JVM will automatically create it
 	private static final long serialVersionUID = 1L;
 
 	private int id;
 	private String name;
-	private String hobby;
+	
+	// transient - when serializing you don't the value to store/transfer on any file/database  
+	private transient String hobby;
 
 	public Person(int id, String name, String hobby) {
 		super();
