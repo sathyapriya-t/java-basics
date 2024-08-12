@@ -5,9 +5,6 @@ import data.StudentDataBase;
 
 import java.util.function.Supplier;
 
-import static java.lang.StringTemplate.STR;
-import static java.util.FormatProcessor.FMT;
-
 public class StringFormat {
 
     public static void main(String[] args) {

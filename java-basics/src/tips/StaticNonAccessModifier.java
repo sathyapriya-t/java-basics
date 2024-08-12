@@ -45,14 +45,14 @@ class StaticMethodClass {
 		count++;
 	}
 
-	// Static methiod can be accessed using class name
-	// It can be called using instances also - but its not recommended
+	// Static method can be accessed using class name
+	// It can be called using instances also - but it's not recommended
 	public static int getI() {
 		return count;
 	}
 
 	public static void setI(int i) {
-		// can't acccess instance variable in static context
+		// can't access instance variable in static context
 		// Because static method belongs to class level
 		// this.name
 		StaticVariableClass.count = i;

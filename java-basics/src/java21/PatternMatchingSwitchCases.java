@@ -21,8 +21,8 @@ class Teacher extends Person {
 public class PatternMatchingSwitchCases {
 
     public static void main(String[] args) {
-
-        Teacher teacher = new Teacher();
+        /*
+       Teacher teacher = new Teacher();
         Person person = new Person();
         //Pattern matching switch cases
         switch (person) {
@@ -34,6 +34,6 @@ public class PatternMatchingSwitchCases {
             case Student student -> student.read();
             default -> throw new IllegalStateException("Unexpected value: " + person);
         }
-
+*/
     }
 }
