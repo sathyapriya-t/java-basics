@@ -6,8 +6,8 @@ interface Person {
     //All the abstract method should be implemented by the child classes
 
     //static and default methods can be created in interfaces
-    //Default method - can be inherited by all the implementing classes and can not be overriden
-    //Static method - can not be inherited or overriden
+    //Default method - can be inherited by all the implementing classes and can be overriden using other access modifiers(private, public,protected)
+    //Static method - can not be inherited or overriden cause it belongs to the class
     void read();
 
     static void write() {
@@ -27,17 +27,18 @@ class Students implements Person {
         System.out.println("Reading");
     }
 
-    //this gives error because static methods can't be override
+    //this gives error because static methods can't be overriden
 //    @Override
 //    static void write() {
 //        System.out.println("Writing");
 //    }
 
-    //this can't be written - gives error
-//    @Override
-//    default void readAndWrite(){
-//        System.out.println("Reading and Writing");
-//    }
+    // this can be overidden - by declaring it as public or private protected
+    // Because default method only allowed in the interface 
+    @Override
+    public void readAndWrite(){
+        System.out.println("Reading and Writing");
+    }
 }
 
 public class StaticAndDefaultMethodInheritance {

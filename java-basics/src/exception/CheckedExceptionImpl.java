@@ -38,5 +38,7 @@ public class CheckedExceptionImpl {
 		Thread.sleep(2000);
 		System.out.println("hellooo !!!");
 	}
+	
+
 
 }
