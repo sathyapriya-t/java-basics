@@ -9,11 +9,11 @@ package exception;
  Class NullPointerException extend RuntimeException(Checked)*/
 
 /*checked Exception - Risk -> Which extends Exception but not RuntimeException
- -> which needs to be handled or throwed by calling class
+ -> which needs to be handled or throwed by calling class - complie time
  -> Eg : InterruptedException
 
   UnChecked Exception - Only Bad Programmers can write - Which extends Exception and RuntimeException
-  ->which need not to be handles by calling class 
+  ->which need not to be handles by calling class - run time
   -> RuntimeException and NullPointerException */
 
 public class CheckedExceptionImpl {
