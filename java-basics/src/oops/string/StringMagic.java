@@ -1,5 +1,8 @@
 package oops.string;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class StringMagic {
 	/*
 	 * Your task is to complete a Java method called countUppercaseLetters. This
@@ -88,6 +91,25 @@ public class StringMagic {
 			}
 		}
 		return longestWord;
+	}
+
+
+
+	private static void printingDulicateValueInAString() {
+		String val = "sathya";
+		String lowerCase = val.trim().toLowerCase();
+		Map<Character,Integer> characterIntegerMap = new HashMap<>();
+		for (char i : lowerCase.toCharArray()) {
+			characterIntegerMap.put(i, characterIntegerMap.getOrDefault(i, 0)+1);
+		}
+
+		System.out.println(characterIntegerMap);
+		for(Map.Entry<Character,Integer> map: characterIntegerMap.entrySet()){
+			if(map.getValue() >1){
+				System.out.println(map.getKey());
+			}
+
+		}
 	}
 
 }
