@@ -45,6 +45,27 @@ public class StreamsApiImpl {
 		System.out.println(partitioningByWithTwoArgument());
 		System.out.println(iterateFactoryMethod());
 		System.out.println(boxedEg().stream().max(Comparator.naturalOrder()));
+		anyMatch();
+		allMatch();
+	}
+
+	private static void anyMatch() {
+		boolean anyMatch = StudentDataBase.getAllStudents().stream().anyMatch(std -> std.getGpa() < 1);
+		if(anyMatch) {
+			System.out.println("there is one below average student");
+		}
+		else {
+			System.out.println("there is no below average student");
+		}
+	}
+	private static void allMatch() {
+		boolean anyMatch = StudentDataBase.getAllStudents().stream().allMatch(std -> std.getGpa() > 1);
+		if(anyMatch) {
+			System.out.println("there is no below average student");
+		}
+		else {
+			System.out.println("there is below average student");
+		}
 	}
 
 	private static List<Integer> iterateFactoryMethod() {

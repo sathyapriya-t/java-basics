@@ -4,9 +4,11 @@ package threads;
 Deamon thread - infrastructure thread
 Non Deamon thread OR User thread - threads that aren't infra thread 
 
- Two types to create Thread implementation:
- 1. Extend Thread class
- 2. Implement Runnable interface
+ Three types to create Thread implementation:
+ 1. Extend Thread class - directly can start()
+ 2. Implement Runnable interface - create new thread and start()
+ 3. Using Callable Interface and Executor Service - submit to executor service
+ 
 
  STATES OF THREAD:
  1.NEW - when a object of the thread is created
@@ -60,7 +62,7 @@ public class ThreadBasic {
 		Thread thread = new Thread(task2); // Extra step - creating object of thread
 		thread.setPriority(10);
 		thread.start(); 
-		Thread.yield();// nor task.run() -> mistake
+		Thread.yield();// not task.run() -> mistake
 
 		// task3
 		task1.join();
