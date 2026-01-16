@@ -1,16 +1,16 @@
 package java8;
 
-import javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec;
+import jdk.jshell.EvalException;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class InterviewPractice {
 
     static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1, 2, 2, 3, 4, 5, 6, 7, 8,8, 8,9, 10);
+        List<Integer> list = Arrays.asList(1, 2, 2, 3, 4, 5, 6, 7, 8, 8, 8, 9, 10);
         Predicate<Integer> integerPredicate = val -> val % 2 == 0;
         Set<Integer> collect = list.stream().filter(integerPredicate).collect(Collectors.toSet());
         System.out.println(collect);
@@ -77,7 +77,7 @@ public class InterviewPractice {
         boolean b1 = list2.stream().anyMatch(v -> v % 3 == 0);
         System.out.println(b1);
 
-        List<List<String>> listList = Arrays.asList(strings,List.of(collect4));
+        List<List<String>> listList = Arrays.asList(strings, List.of(collect4));
         List<String> list5 = listList.stream().flatMap(Collection::stream).toList();
         System.out.println(list5);
 
@@ -89,9 +89,9 @@ public class InterviewPractice {
 
         System.out.println("-------------------------------------------------------------------------");
 
-        Employee employee = new Employee(1,2000,"IT",23);
-        Employee employee1 = new Employee(3,1000,"BPO",27);
-        Employee employee2 = new Employee(2,5000,"HR",20);
+        Employee employee = new Employee(1, 2000, "IT", 23);
+        Employee employee1 = new Employee(3, 1000, "IBPO", 27);
+        Employee employee2 = new Employee(2, 5000, "HR", 20);
 
         List<Employee> employeeList = new ArrayList<>();
         employeeList.add(employee);
@@ -114,6 +114,35 @@ public class InterviewPractice {
         System.out.println(collect8);
 
         System.out.println("--------------------------------------");
+
+        Optional<Employee> first3 = employeeList.stream().max(Comparator.comparingDouble(Employee::getSalary));
+        System.out.println(first3);
+
+        List<String> list7 = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepatment, Collectors.counting())).entrySet().stream().filter(v -> v.getValue() > 2).map(Map.Entry::getKey).toList();
+        System.out.println(list7);
+
+
+        Map<String, Double> collect9 = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepatment, Collectors.averagingDouble(Employee::getSalary)));
+        List<Double> list8 = collect9.entrySet().stream().max(Comparator.comparingDouble(Map.Entry::getValue)).stream().map(Map.Entry::getValue).toList();
+        System.out.println(list8);
+
+        String s = "sathya";
+        Map<String, Long> collect10 = Arrays.stream(s.split("")).collect(Collectors.groupingBy(va -> va, Collectors.counting()));
+        Optional<String> first4 = collect10.entrySet().stream().max(Comparator.comparingDouble(Map.Entry::getValue)).stream().map(Map.Entry::getKey).findFirst();
+        System.out.println(first4);
+        Map<String, Long> collect11 = Arrays.stream(s.split("")).collect(Collectors.groupingBy(va -> va, LinkedHashMap::new, Collectors.counting()));
+        System.out.println(collect11);
+        Optional<String> first5 = collect11.entrySet().stream().filter(val -> val.getValue() == 1).map(Map.Entry::getKey).findFirst();
+        System.out.println(first5);
+
+
+        System.out.println("---------------------------------------------------");
+        Optional<String> first6 = employeeList.stream().map(va -> va.getDepatment()).map(val -> val.substring(0, 1)).collect(Collectors.groupingBy(v -> v, Collectors.counting())).entrySet().stream().max(Comparator.comparingDouble(Map.Entry::getValue)).stream().map(Map.Entry::getKey).findFirst();
+        System.out.println(first6);
+
+        String str = "I am beautiful!!";
+        Arrays.stream(str.trim().split("//s+")).filter(v ->Character.isLetterOrDigit(Integer.parseInt(v)));
+
 
     }
 }
